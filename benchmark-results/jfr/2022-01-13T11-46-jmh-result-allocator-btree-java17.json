@@ -1,0 +1,89 @@
+[
+    {
+        "jmhVersion" : "1.33",
+        "benchmark" : "com.test.benchmarks.alloc.BinaryTreesBenchmark.binaryTreesBench",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "jvms/sapmachine17/bin/java",
+        "jvmArgs" : [
+            "-Xms5g",
+            "-Xmx5g",
+            "-XX:+HeapDumpOnOutOfMemoryError",
+            "-XX:+AlwaysPreTouch",
+            "-XX:StartFlightRecording=settings=profile,filename=./results/jfr/profiling/2022-01-13T11-46-jmh-allocator-btree-java17.jfr"
+        ],
+        "jdkVersion" : "17.0.1",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "17.0.1+12-LTS",
+        "warmupIterations" : 5,
+        "warmupTime" : "10 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "30 s",
+        "measurementBatchSize" : 1,
+        "primaryMetric" : {
+            "score" : 6167.038426232221,
+            "scoreError" : 334.34488771783055,
+            "scoreConfidence" : [
+                5832.693538514391,
+                6501.383313950052
+            ],
+            "scorePercentiles" : {
+                "0.0" : 5553.047771166666,
+                "50.0" : 5937.725776083333,
+                "90.0" : 6902.41524914,
+                "95.0" : 7010.48664189,
+                "99.0" : 7022.5930308,
+                "99.9" : 7022.5930308,
+                "99.99" : 7022.5930308,
+                "99.999" : 7022.5930308,
+                "99.9999" : 7022.5930308,
+                "100.0" : 7022.5930308
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    5915.4369375,
+                    5901.5846895,
+                    5691.949930333333,
+                    5960.014614666667,
+                    6118.0003738,
+                    5688.1367645,
+                    5860.454396666667,
+                    6729.7046294,
+                    5750.457242666666,
+                    5553.047771166666
+                ],
+                [
+                    6247.9090638,
+                    5652.497476833333,
+                    6774.4699658,
+                    6835.9169,
+                    6722.7364078,
+                    6909.8039546,
+                    7022.5930308,
+                    6232.7738438,
+                    5693.637728,
+                    5842.998883
+                ],
+                [
+                    6299.0998566,
+                    5724.109058833334,
+                    5668.906564666667,
+                    6542.8125058,
+                    6722.3157064,
+                    6799.5555896,
+                    7000.5814146,
+                    5824.743945666667,
+                    5559.489913166667,
+                    5765.413627
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

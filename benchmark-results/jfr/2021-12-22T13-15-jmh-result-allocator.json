@@ -1,0 +1,89 @@
+[
+    {
+        "jmhVersion" : "1.33",
+        "benchmark" : "com.test.benchmarks.alloc.AllocationBenchmark.allocationBench",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "jvms/sapmachine11/bin/java",
+        "jvmArgs" : [
+            "-Xms5g",
+            "-Xmx5g",
+            "-XX:+HeapDumpOnOutOfMemoryError",
+            "-XX:+AlwaysPreTouch",
+            "-XX:StartFlightRecording=settings=profile,filename=./results/jfr/profiling/2021-12-22T13-15-jmh-allocator.jfr"
+        ],
+        "jdkVersion" : "11.0.12",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "11.0.12+7-LTS-sapmachine",
+        "warmupIterations" : 5,
+        "warmupTime" : "10 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "10 s",
+        "measurementBatchSize" : 1,
+        "primaryMetric" : {
+            "score" : 1.9809868617696396E8,
+            "scoreError" : 7013163.704462791,
+            "scoreConfidence" : [
+                1.9108552247250116E8,
+                2.0511184988142675E8
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1.8869892426415095E8,
+                "50.0" : 1.9450661896153846E8,
+                "90.0" : 2.0841254158941326E8,
+                "95.0" : 2.267975144270833E8,
+                "99.0" : 2.45698452E8,
+                "99.9" : 2.45698452E8,
+                "99.99" : 2.45698452E8,
+                "99.999" : 2.45698452E8,
+                "99.9999" : 2.45698452E8,
+                "100.0" : 2.45698452E8
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    1.9661789150980392E8,
+                    1.9219877518867925E8,
+                    1.9764722370588234E8,
+                    1.9401892657692307E8,
+                    1.9452185382692307E8,
+                    1.9324341030769232E8,
+                    1.9831417588235295E8,
+                    2.0723169008163264E8,
+                    2.085437473125E8,
+                    1.9369385503846154E8
+                ],
+                [
+                    2.1133311095833334E8,
+                    2.45698452E8,
+                    1.9767965043137255E8,
+                    1.9375775898076922E8,
+                    1.8869892426415095E8,
+                    1.9444319875E8,
+                    1.9149417950943395E8,
+                    2.0040768926E8,
+                    1.8876813250943395E8,
+                    1.9303393253846154E8
+                ],
+                [
+                    2.0146628226E8,
+                    1.9863464398039216E8,
+                    1.904705369245283E8,
+                    1.9449138409615386E8,
+                    1.9661658652941176E8,
+                    2.0155756734E8,
+                    1.9343157359615386E8,
+                    1.9250327344230768E8,
+                    1.9875207737254903E8,
+                    1.936900811346154E8
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

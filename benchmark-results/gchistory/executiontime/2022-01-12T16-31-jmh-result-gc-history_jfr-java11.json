@@ -1,0 +1,90 @@
+[
+    {
+        "jmhVersion" : "1.33",
+        "benchmark" : "com.test.benchmarks.gc.GCBenchmark.gcBench",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "jvms/sapmachine11/bin/java",
+        "jvmArgs" : [
+            "-Xms5g",
+            "-Xmx5g",
+            "-XX:+HeapDumpOnOutOfMemoryError",
+            "-XX:+AlwaysPreTouch",
+            "-XX:+UseG1GC",
+            "-XX:StartFlightRecording=settings=jfr/sapmachine-gc-history.jfc,filename=./results/jfr/profiling/2022-01-12T16-31-jmh-gc-history.jfr"
+        ],
+        "jdkVersion" : "11.0.12",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "11.0.12+7-LTS-sapmachine",
+        "warmupIterations" : 5,
+        "warmupTime" : "10 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "10 s",
+        "measurementBatchSize" : 1,
+        "primaryMetric" : {
+            "score" : 2.0515167166884955E7,
+            "scoreError" : 956619.0665808206,
+            "scoreConfidence" : [
+                1.9558548100304134E7,
+                2.1471786233465776E7
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1.8978033504743833E7,
+                "50.0" : 2.019149922448456E7,
+                "90.0" : 2.242324739230735E7,
+                "95.0" : 2.3463286942856036E7,
+                "99.0" : 2.4652503901477832E7,
+                "99.9" : 2.4652503901477832E7,
+                "99.99" : 2.4652503901477832E7,
+                "99.999" : 2.4652503901477832E7,
+                "99.9999" : 2.4652503901477832E7,
+                "100.0" : 2.4652503901477832E7
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    2.4652503901477832E7,
+                    2.0979224496855345E7,
+                    1.97448871321499E7,
+                    1.961026426223092E7,
+                    1.9083585156190477E7,
+                    1.9167998382409178E7,
+                    1.9394924073643412E7,
+                    1.904660583269962E7,
+                    1.910406164312977E7,
+                    1.913572152581262E7
+                ],
+                [
+                    1.982064819207921E7,
+                    2.0273389603238866E7,
+                    2.012860273641851E7,
+                    1.9954060583665337E7,
+                    1.9077222460952383E7,
+                    1.932249893050193E7,
+                    1.9407903877906978E7,
+                    1.8978033504743833E7,
+                    2.041167705510204E7,
+                    2.0254395712550607E7
+                ],
+                [
+                    2.2432389948545862E7,
+                    2.233129055357143E7,
+                    2.2490291249438204E7,
+                    2.1702370744034708E7,
+                    2.0478161419222903E7,
+                    2.071048727536232E7,
+                    2.2340964386160713E7,
+                    2.1118155698312238E7,
+                    2.2144864743362833E7,
+                    2.215782992477876E7
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

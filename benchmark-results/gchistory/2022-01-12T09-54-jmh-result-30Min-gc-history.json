@@ -1,0 +1,57 @@
+[
+    {
+        "jmhVersion" : "1.33",
+        "benchmark" : "com.test.benchmarks.gc.history.GC30MinBenchmark.gcBench",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "jvms/sapmachine11/bin/java",
+        "jvmArgs" : [
+            "-Xms5g",
+            "-Xmx5g",
+            "-XX:+HeapDumpOnOutOfMemoryError",
+            "-XX:+AlwaysPreTouch",
+            "-XX:+UseG1GC",
+            "-XX:StartFlightRecording=settings=jfr/sapmachine-gc-history.jfc,filename=./results/jfr/profiling/2022-01-12T09-54-jmh-30Min-gc-history.jfr"
+        ],
+        "jdkVersion" : "11.0.12",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "11.0.12+7-LTS-sapmachine",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "primaryMetric" : {
+            "score" : 30.000164941883334,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 30.000164941883334,
+                "50.0" : 30.000164941883334,
+                "90.0" : 30.000164941883334,
+                "95.0" : 30.000164941883334,
+                "99.0" : 30.000164941883334,
+                "99.9" : 30.000164941883334,
+                "99.99" : 30.000164941883334,
+                "99.999" : 30.000164941883334,
+                "99.9999" : 30.000164941883334,
+                "100.0" : 30.000164941883334
+            },
+            "scoreUnit" : "min/op",
+            "rawData" : [
+                [
+                    30.000164941883334
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+
